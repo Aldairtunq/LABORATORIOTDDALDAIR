@@ -31,5 +31,20 @@ class AguaTest extends TestCase
        
             }  
        } 
- } 
+      
+       public function testGaseoso(): void 
+       { 
+               foreach (range(100, 500) as $temperatura) { 
+                $estado = $this->miAgua->getEstado ($temperatura); 
+                $this->assertSame ('Gaseoso', $estado, "Temperatura $temperatur  a no es Gaseoso"); 
+            } 
+       } 
+       
+       public function testTipoFloat0Int(): void 
+       { 
+                $estado = $this->miAgua->getEstado ($temperatura); 
+                $this->assertSame ('Gaseoso', $estado, "Temperatura $temperatur  a no es Gaseoso"); 
+                } 
+            
+    }
    
